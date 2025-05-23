@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 79 70 229;   /* indigo-600 */
+    --color-primary-light: 99 102 241; /* indigo-500 */
+    --color-primary-dark: 67 56 202;  /* indigo-700 */
+    
+    --color-secondary: 16 185 129;  /* emerald-500 */
+    --color-secondary-light: 52 211 153; /* emerald-400 */
+    --color-secondary-dark: 5 150 105;  /* emerald-600 */
+    
+    --color-accent: 249 115 22;  /* orange-500 */
+    --color-success: 34 197 94;  /* green-500 */
+    --color-warning: 234 179 8;  /* yellow-500 */
+    --color-error: 239 68 68;    /* red-500 */
+    
+    --color-gray-50: 249 250 251;
+    --color-gray-100: 243 244 246;
+    --color-gray-200: 229 231 235;
+    --color-gray-300: 209 213 219;
+    --color-gray-400: 156 163 175;
+    --color-gray-500: 107 114 128;
+    --color-gray-600: 75 85 99;
+    --color-gray-700: 55 65 81;
+    --color-gray-800: 31 41 55;
+    --color-gray-900: 17 24 39;
+    
+    --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  color: rgb(var(--color-gray-800));
+  background-color: rgb(var(--color-gray-50));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors 
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none 
+    disabled:opacity-50 hover:opacity-90 active:opacity-100;
+  }
+  
+  .btn-primary {
+    @apply bg-indigo-600 text-white hover:bg-indigo-700 h-10 px-4 py-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-gray-800 border border-gray-300 hover:bg-gray-100 h-10 px-4 py-2;
+  }
+  
+  .btn-accent {
+    @apply bg-emerald-600 text-white hover:bg-emerald-700 h-10 px-4 py-2;
+  }
+  
+  .btn-sm {
+    @apply h-8 px-3 text-xs;
+  }
+  
+  .btn-lg {
+    @apply h-12 px-6 text-base;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden;
+  }
+  
+  .card-header {
+    @apply p-4 border-b border-gray-200 bg-gray-50;
+  }
+  
+  .card-content {
+    @apply p-4;
+  }
+  
+  .card-footer {
+    @apply p-4 border-t border-gray-200 bg-gray-50;
+  }
+  
+  .input {
+    @apply flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm 
+    placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500
+    disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  
+  .label {
+    @apply text-sm font-medium text-gray-700 mb-1;
+  }
+}
