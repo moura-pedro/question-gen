@@ -5,5 +5,9 @@
     "multer": "^2.0.0",
     "openai": "^4.103.0",
     "pdf-parse": "^1.1.1"
+  },
+
+  "scripts": {
+    "start": "node index.js"
   }
 }
