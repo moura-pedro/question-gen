@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           <div className="flex items-center space-x-1 text-sm text-gray-500">
             <span>Made with</span>
             <Heart className="h-4 w-4 text-red-500" />
-            <span>by AI assistants</span>
+            <span>by Pedro Moura</span>
           </div>
           
           <div className="flex space-x-4">
