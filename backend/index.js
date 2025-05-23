@@ -20,7 +20,11 @@ const upload = multer({
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 // Enable CORS for all routes
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://gen-questions-frontend.vercel.app'],
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // Add body parser middleware
 app.use(express.json());
